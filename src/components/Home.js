@@ -473,7 +473,7 @@ const Navbar = () => {
 
   // Function to get route identifier for highlighting
   const getRouteId = (route) => {
-    switch(route) {
+    switch (route) {
       case '/': return 'home';
       case '/clgsec': return 'ourcolleges';
       case '/about': return 'aboutus';
@@ -544,11 +544,21 @@ const Navbar = () => {
               href="https://www.instagram.com/engineering_india2047?igsh=MTNpaWthOWRvajI4eA=="
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-white text-[18px] font-medium rounded-[30px] bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 px-[1.5em] py-[0.6em] shadow-lg hover:scale-105 active:scale-95 transition-all duration-300"
+              className="flex items-center gap-2 text-white text-[18px] font-medium rounded-[30px] bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 px-[1em] py-[0.5em] shadow-lg hover:scale-105 active:scale-95 transition-all duration-300"
             >
               <Instagram className="w-5 h-5" />
               Instagram
             </a>
+
+
+            {/* Join Us Button */}
+            <a
+              href="https://forms.gle/zz7mLjSaoZUnzN4v9"
+              className="flex items-center gap-2 text-white text-[18px] font-medium rounded-[30px] bg-gradient-to-r from-green-500 via-emerald-500 to-teal-500 px-[1.5em] py-[0.6em] shadow-lg hover:scale-105 active:scale-95 transition-all duration-300"
+            >
+              Join Us
+            </a>
+
           </div>
         </div>
 
@@ -584,6 +594,14 @@ const Navbar = () => {
               <Instagram className="w-6 h-6" />
               Instagram
             </a>
+            <a
+              href="https://forms.gle/zz7mLjSaoZUnzN4v9"
+              className="flex items-center gap-2 text-white text-[1.2rem] font-medium rounded-[30px] bg-gradient-to-r from-green-500 via-emerald-500 to-teal-500 px-6 py-3 shadow-lg hover:scale-105 active:scale-95 transition-all duration-300"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Join Us
+            </a>
+
           </div>
         )}
       </nav>
