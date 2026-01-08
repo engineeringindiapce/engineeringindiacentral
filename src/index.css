@@ -1,3 +1,191 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* -----------------------------
+	 Responsive overrides & fixes
+	 - Only CSS changes (no markup/component changes)
+	 - Uses relative units and media queries for mobile/tablet/desktop
+------------------------------*/
+
+/* Global image rules: scale and preserve aspect ratio */
+img,
+picture,
+video,
+svg {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
+/* Prevent overflow from long words / links */
+* {
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	overflow-wrap: break-word;
+	word-break: break-word;
+	hyphens: auto;
+}
+
+/* Page container to provide consistent padding and max-width */
+.container {
+	width: 100%;
+	max-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
+/* Generic card/grid helpers: stack responsively */
+.cards-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+	gap: 1rem;
+}
+.card {
+	width: 100%;
+	display: block;
+}
+
+/* Navbar fallbacks: keep layout horizontal on desktop, stack on mobile */
+nav,
+.navbar {
+	width: 100%;
+}
+.nav-links {
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+/* Ensure text scales reasonably (use rem relative units) */
+html {
+	font-size: 16px;
+}
+body {
+	font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+	line-height: 1.4;
+	color: inherit;
+}
+
+/* Utility: prevent horizontal scroll if an element is too wide */
+.no-overflow {
+	max-width: 100%;
+	overflow-x: hidden;
+}
+
+/* -----------------------------
+	 Breakpoints
+	 Mobile: up to 480px
+	 Tablet: up to 768px
+	 Desktop: 1024px and above
+------------------------------*/
+
+/* Mobile first adjustments */
+@media (max-width: 480px) {
+	html { font-size: 14px; }
+
+	/* Stack nav links vertically for small screens */
+	.nav-links {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 0.5rem;
+	}
+
+	/* Ensure header/footer padding is compact */
+	header, .App-header, footer {
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
+
+	/* Make any wide grids single column */
+	.grid, .cards-grid {
+		grid-template-columns: 1fr !important;
+	}
+
+	/* Reduce margins/paddings to fit content */
+	.section, .card, .content {
+		padding: 0.75rem !important;
+		margin: 0 !important;
+	}
+
+	/* Images inside sliders/cards should fit their container */
+	.slick-slide img, .card img, .hero img {
+		width: 100% !important;
+		height: auto !important;
+		object-fit: cover;
+	}
+
+	/* Typography adjustments */
+	h1, h2, h3, h4, h5 {
+		line-height: 1.15;
+		margin-top: 0.5rem;
+		margin-bottom: 0.5rem;
+	}
+
+	/* Prevent overflow on code or long strings */
+	pre, code {
+		white-space: pre-wrap;
+		word-break: break-word;
+	}
+}
+
+/* Tablet adjustments */
+@media (max-width: 768px) {
+	html { font-size: 15px; }
+
+	/* Use two-column grids where possible */
+	.grid, .cards-grid {
+		grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+	}
+
+	/* Navbar: horizontal but wrap links */
+	.nav-links {
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		gap: 0.75rem;
+	}
+
+	/* Slightly larger paddings for tablet */
+	.section, .card, .content {
+		padding: 1rem !important;
+	}
+}
+
+/* Desktop (1024px and above) */
+@media (min-width: 1024px) {
+	html { font-size: 16px; }
+
+	.container {
+		padding-left: 2rem;
+		padding-right: 2rem;
+	}
+
+	/* Keep desktop navbar inline */
+	.nav-links {
+		flex-direction: row;
+		align-items: center;
+	}
+
+	/* Limit very wide content for readability */
+	.content, .article-body {
+		max-width: 75ch;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+/* Small helper to avoid accidental overflow from very wide images/iframes */
+iframe, embed, object {
+	max-width: 100%;
+}
+
+/* Ensure form inputs wrap and are usable on small screens */
+input, textarea, select, button {
+	max-width: 100%;
+}
+

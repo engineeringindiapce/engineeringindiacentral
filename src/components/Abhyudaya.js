@@ -59,7 +59,7 @@ const timelineData = [
   { year: "2011", title: "Inception", desc: "Abhyudaya was founded with a vision to foster creativity and cultural exchange among students." },
   { year: "2015", title: "Intercollege Event", desc: "Expanded its reach, welcoming participants from various engineering colleges across Nagpur." },
   { year: "2023", title: "Tech + Cultural Merge", desc: "Integrated technical competitions with cultural events, broadening its scope and appeal." },
-  { year: "2024", title: "Mega Fest", desc: "Achieved a milestone with over 1000 attendees, significant media coverage, and widespread acclaim." },
+  { year: "2024", title: "Mega Fest", desc: "Achieved a milestone with over 2500 attendees, significant media coverage, and widespread acclaim." },
 ];
 
 // Memories data for slideshow
@@ -165,7 +165,7 @@ const Abhyudaya = () => {
     textShadow: "0px 0px 20px rgba(37, 99, 235, 0.9)",
     color: "#1d4ed8" // Tailwind blue-700
   }}
-  className="text-9xl font-extrabold bg-gradient-to-r from-blue-500 via-blue-700 to-blue-900 text-transparent bg-clip-text drop-shadow-lg"
+  className="text-4xl sm:text-5xl md:text-7xl lg:text-9xl font-extrabold bg-gradient-to-r from-blue-500 via-blue-700 to-blue-900 text-transparent bg-clip-text drop-shadow-lg"
 >
   ABHYUDAYA
 </motion.h1>
@@ -207,7 +207,7 @@ const Abhyudaya = () => {
   <motion.button
     whileHover={{ scale: 1.05, boxShadow: "0 10px 25px rgba(0, 0, 0, 0.25)" }}
     whileTap={{ scale: 0.95 }}
-    className="px-10 py-4 bg-gradient-to-br from-blue-600 to-indigo-800 text-white font-bold rounded-full shadow-lg hover:from-blue-700 hover:to-indigo-900 transition-all duration-300 ease-in-out transform text-lg"
+    className="px-6 md:px-10 py-3 md:py-4 bg-gradient-to-br from-blue-600 to-indigo-800 text-white font-bold rounded-full shadow-lg hover:from-blue-700 hover:to-indigo-900 transition-all duration-300 ease-in-out transform text-base md:text-lg"
   >
     VIEW HIGHLIGHTS
   </motion.button>
@@ -215,8 +215,8 @@ const Abhyudaya = () => {
 
           <motion.button
               whileHover={{ scale: 1.05, boxShadow: "0 10px 25px rgba(0, 0, 0, 0.15)" }}
-              whileTap={{ scale: 0.95 }}
-              className="hidden px-10 py-4 border-2 border-blue-600 text-blue-700 font-bold rounded-full hover:bg-blue-600 hover:text-white transition-all duration-300 ease-in-out transform text-lg"
+                  whileTap={{ scale: 0.95 }}
+                  className="hidden px-6 md:px-10 py-3 md:py-4 border-2 border-blue-600 text-blue-700 font-bold rounded-full hover:bg-blue-600 hover:text-white transition-all duration-300 ease-in-out transform text-base md:text-lg"
 >
               REGISTER NOW
          </motion.button>
@@ -228,7 +228,7 @@ const Abhyudaya = () => {
           initial={{ opacity: 0, y: 60 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1, duration: 0.9, ease: "easeOut" }}
-          className="max-w-4xl text-center bg-white/75 backdrop-blur-md rounded-3xl p-10 shadow-2xl border border-blue-100 transform hover:scale-[1.01] transition-transform duration-300"
+          className="max-w-4xl text-center bg-white/75 backdrop-blur-md rounded-3xl p-6 md:p-10 shadow-2xl border border-blue-100 transform hover:scale-[1.01] transition-transform duration-300"
         >
           <h2 className="text-3xl text-blue-900 font-extrabold mb-5">About Abhyudaya</h2>
           <p className="text-lg text-gray-700 leading-relaxed">
@@ -353,7 +353,7 @@ Wisdom and leadership in Engineering India stand for guiding young minds with va
   whileHover={{ scale: 1.02 }}
   className={`bg-gradient-to-br from-indigo-100 via-white to-orange-100 rounded-3xl shadow-lg p-6 text-gray-800 transition-all duration-300 ${
     item.isCentered
-      ? "flex flex-col justify-center items-center text-center h-[300px] hover:shadow-2xl"
+      ? "flex flex-col justify-center items-center text-center py-8 hover:shadow-2xl"
       : "flex flex-col justify-between hover:shadow-2xl"
   }`}
 >
@@ -459,8 +459,8 @@ Wisdom and leadership in Engineering India stand for guiding young minds with va
   />
 
         
-        <div className="absolute top-10 left-10 text-9xl opacity-5 rotate-12 pointer-events-none text-blue-300">🏆</div>
-        <div className="absolute bottom-10 right-10 text-9xl opacity-5 -rotate-12 pointer-events-none text-green-300">✨</div>
+        <div className="hidden sm:block absolute top-10 left-10 text-6xl md:text-9xl opacity-5 rotate-12 pointer-events-none text-blue-300">🏆</div>
+        <div className="hidden sm:block absolute bottom-10 right-10 text-6xl md:text-9xl opacity-5 -rotate-12 pointer-events-none text-green-300">✨</div>
 
         <h2 className="text-5xl md:text-6xl text-blue-800 font-extrabold text-center mb-16 drop-shadow-lg leading-tight">
           Unleash Your Potential: <br /> Our Exciting Competitions
@@ -534,8 +534,8 @@ Wisdom and leadership in Engineering India stand for guiding young minds with va
         />
 
         {/* Decorative elements */}
-        <div className="absolute top-10 left-10 text-9xl opacity-5 rotate-12 pointer-events-none text-rose-300">📸</div>
-        <div className="absolute bottom-10 right-10 text-9xl opacity-5 -rotate-12 pointer-events-none text-amber-300">💫</div>
+        <div className="hidden sm:block absolute top-10 left-10 text-6xl md:text-9xl opacity-5 rotate-12 pointer-events-none text-rose-300">📸</div>
+        <div className="hidden sm:block absolute bottom-10 right-10 text-6xl md:text-9xl opacity-5 -rotate-12 pointer-events-none text-amber-300">💫</div>
 
         {/* Section Title */}
         <motion.h2
@@ -549,14 +549,14 @@ Wisdom and leadership in Engineering India stand for guiding young minds with va
         </motion.h2>
 
         {/* Slideshow Container */}
-        <motion.div
+          <motion.div
           initial={{ opacity: 0, y: 60 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, ease: "easeOut" }}
           className="relative max-w-4xl mx-auto bg-white/90 backdrop-blur-md rounded-3xl shadow-2xl overflow-hidden border border-rose-100"
         >
           {/* Image Display */}
-          <div className="relative h-80 md:h-96 overflow-hidden">
+          <div className="relative h-56 md:h-96 overflow-hidden">
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentSlide}
@@ -619,7 +619,7 @@ Wisdom and leadership in Engineering India stand for guiding young minds with va
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 0.8 }}
-            className="absolute top-6 right-6 bg-black/70 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-semibold"
+            className="absolute top-6 right-6 bg-black/70 backdrop-blur-sm text-white px-3 py-1.5 rounded-full text-sm font-semibold"
           >
             {currentSlide + 1} / {memoriesData.length}
           </motion.div>
@@ -756,10 +756,10 @@ Wisdom and leadership in Engineering India stand for guiding young minds with va
 />
 
         {/* 🌌 Decorative Background Icon - Enhanced opacity and colors */}
-        <div className="absolute top-10 left-10 text-9xl opacity-10 select-none pointer-events-none text-purple-300">
+        <div className="hidden sm:block absolute top-10 left-10 text-6xl md:text-9xl opacity-10 select-none pointer-events-none text-purple-300">
           ⏳
         </div>
-        <div className="absolute bottom-10 right-10 text-9xl opacity-10 select-none pointer-events-none text-indigo-300">
+        <div className="hidden sm:block absolute bottom-10 right-10 text-6xl md:text-9xl opacity-10 select-none pointer-events-none text-indigo-300">
           🚀
         </div>
 

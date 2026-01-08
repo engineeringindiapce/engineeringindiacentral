@@ -31,18 +31,18 @@ const AboutPage = () => {
       <section className="relative pt-24 pb-15 px-4 text-center">
         <div className="max-w-4xl mx-auto relative z-10">
           <div className="flex justify-center">
-            <h1 className="flex items-center gap-3 text-4xl md:text-6xl font-bold animate-fadeInUp">
-              <span className="text-[4.2rem] text-[#1d0e4e] font-extrabold tracking-wider drop-shadow-sm hover:drop-shadow-md transition-all duration-500">
+            <h1 className="flex items-center gap-3 text-3xl md:text-4xl lg:text-6xl font-bold animate-fadeInUp">
+              <span className="text-3xl md:text-5xl text-[#1d0e4e] font-extrabold tracking-wider drop-shadow-sm hover:drop-shadow-md transition-all duration-500">
                 ABOUT
               </span>
               <span className="flex animate-slideInUp delay-300">
-                <span className="text-white text-[3.5rem] font-black px-2 py-2 bg-[#ea7707] rounded-sm shadow-md hover:scale-105 hover:shadow-lg transition-all duration-300">U</span>
-                <span className="text-white text-[3.5rem] font-black px-2 py-2 bg-[#fe9124] rounded-sm shadow-md hover:scale-105 hover:shadow-lg transition-all duration-300">S</span>
+                <span className="text-white text-2xl md:text-4xl font-black px-2 py-2 bg-[#ea7707] rounded-sm shadow-md hover:scale-105 hover:shadow-lg transition-all duration-300">U</span>
+                <span className="text-white text-2xl md:text-4xl font-black px-2 py-2 bg-[#fe9124] rounded-sm shadow-md hover:scale-105 hover:shadow-lg transition-all duration-300">S</span>
               </span>
             </h1>
           </div>
 
-          <p className="text-xl md:text-4xl max-w-[900px] mt-8 leading-tight font-bold text-center animate-fadeInUp delay-500">
+          <p className="text-base md:text-lg lg:text-xl max-w-xl md:max-w-3xl mt-8 leading-tight font-bold text-center animate-fadeInUp delay-500">
             Think <span className="text-[#00008b] font-bold hover:scale-105 transition-transform duration-300 inline-block">Nationally</span>, Act <span className="text-[#059669] font-bold hover:scale-105 transition-transform duration-300 inline-block">Locally</span>
           </p>
 

@@ -163,24 +163,24 @@ const Magazines = () => {
         {/* Hero Section */}
         <div className="relative w-full bg-gradient-to-br from-[rgba(173,216,230,0.35)] to-[rgba(173,216,230,0.55)] py-20 overflow-hidden">
           <AnimatedSection direction="scale" className="max-w-6xl mx-auto text-center px-6">
-            <h1 className="text-5xl md:text-7xl font-bold mb-6">
+            <h1 className="text-3xl md:text-5xl font-bold mb-6">
               <span className="text-[#2D1B69] font-extrabold tracking-wider">ENGINEERING</span>
               <br />
               <span className="flex justify-center items-center mt-6">
-                <span className="text-[#FFFFFF] text-[3.5rem] md:text-[4rem] font-black px-[0.8rem] py-2 bg-gradient-to-r from-[#FF8C00] to-[#FF6347] rounded-lg shadow-lg">I</span>
-                <span className="text-[#FFFFFF] text-[3.5rem] md:text-[4rem] font-black px-[0.8rem] py-2 bg-gradient-to-r from-[#FF8C00] to-[#FF6347] rounded-lg mx-1 shadow-lg">N</span>
-                <span className="text-[#800080] text-[3.5rem] md:text-[4rem] font-black px-[0.8rem] py-2 bg-gradient-to-r from-[#F5F5DC] to-[#FFFAF0] rounded-lg shadow-lg">D</span>
-                <span className="text-[#FFFFFF] text-[3.5rem] md:text-[4rem] font-black px-[0.8rem] py-2 bg-gradient-to-r from-[#228B22] to-[#32CD32] rounded-lg mx-1 shadow-lg">I</span>
-                <span className="text-[#FFFFFF] text-[3.5rem] md:text-[4rem] font-black px-[0.8rem] py-2 bg-gradient-to-r from-[#006400] to-[#228B22] rounded-lg shadow-lg">A</span>
+                <span className="text-[#FFFFFF] text-2xl md:text-4xl font-black px-3 py-2 bg-gradient-to-r from-[#FF8C00] to-[#FF6347] rounded-lg shadow-lg">I</span>
+                <span className="text-[#FFFFFF] text-2xl md:text-4xl font-black px-3 py-2 bg-gradient-to-r from-[#FF8C00] to-[#FF6347] rounded-lg mx-1 shadow-lg">N</span>
+                <span className="text-[#800080] text-2xl md:text-4xl font-black px-3 py-2 bg-gradient-to-r from-[#F5F5DC] to-[#FFFAF0] rounded-lg shadow-lg">D</span>
+                <span className="text-[#FFFFFF] text-2xl md:text-4xl font-black px-3 py-2 bg-gradient-to-r from-[#228B22] to-[#32CD32] rounded-lg mx-1 shadow-lg">I</span>
+                <span className="text-[#FFFFFF] text-2xl md:text-4xl font-black px-3 py-2 bg-gradient-to-r from-[#006400] to-[#228B22] rounded-lg shadow-lg">A</span>
               </span>
             </h1>
 
             {/* Sanskrit Quote */}
-            <AnimatedSection direction="up" delay={300} className="mt-8 px-4">
-              <p className="text-[#B22222] text-xl md:text-2xl font-bold tracking-wide">
+              <AnimatedSection direction="up" delay={300} className="mt-8 px-4">
+              <p className="text-[#B22222] text-lg md:text-xl font-bold tracking-wide">
                 || यः करोति मनोभूत्यानि न तस्यास्ति दुष्कृतम् ||
               </p>
-              <p className="text-[#2D1B69] text-lg md:text-xl mt-2 font-semibold italic">
+              <p className="text-[#2D1B69] text-base md:text-lg mt-2 font-semibold italic">
                 "One who acts with pure intentions never faces failure"
               </p>
             </AnimatedSection>
@@ -358,9 +358,9 @@ const Magazines = () => {
                     {/* Read Full Magazine Button */}
                     <AnimatedSection direction="scale" delay={900} className="text-center mt-10">
                       <button
-                        onClick={handleFullMagazineClick}
-                        className="inline-flex items-center bg-gradient-to-r from-[#ea7707] to-[#fe9124] text-white px-8 py-4 rounded-full font-bold text-lg hover:from-[#fe9124] hover:to-[#ea7707] transition-all duration-300 shadow-2xl hover:shadow-3xl transform hover:scale-110"
-                      >
+                                  onClick={handleFullMagazineClick}
+                                  className="inline-flex items-center bg-gradient-to-r from-[#ea7707] to-[#fe9124] text-white px-6 md:px-8 py-3 md:py-4 rounded-full font-bold text-base md:text-lg hover:from-[#fe9124] hover:to-[#ea7707] transition-all duration-300 shadow-2xl hover:shadow-3xl transform hover:scale-110"
+                                >
                         <svg className="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                         </svg>
@@ -406,7 +406,7 @@ const Footer = () => {
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex flex-col items-center">
           {/* Logo */}
-          <img src="/images/logo.png" alt="Logo" className="w-30 h-20 mb-6" />
+          <img src="/images/logo.png" alt="Logo" className="w-32 h-auto mb-6" />
 
           {/* Social Media Icons */}
           <div className="flex justify-center space-x-6 mt-2 animate-fadeInUp delay-300">

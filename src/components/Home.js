@@ -90,7 +90,7 @@ const Page = () => {
               variants={fadeUp}
               className="text-4xl md:text-6xl font-semibold"
             >
-              <span className="text-[4.2rem] text-[#1d0e4e] font-extrabold tracking-wider drop-shadow-sm py-2">
+              <span className="text-3xl md:text-5xl text-[#1d0e4e] font-extrabold tracking-wider drop-shadow-sm py-2">
                 ENGINEERING
               </span>
               <br />
@@ -116,7 +116,7 @@ const Page = () => {
                       variants={fadeUp}
                       custom={index + 1}
                       whileHover={{ scale: 1.1 }}
-                      className={`text-[3.5rem] font-black px-[0.5rem] py-2 rounded-sm shadow-md`}
+                      className={`text-2xl md:text-4xl lg:text-5xl font-black px-2 py-2 rounded-sm shadow-md`}
                       style={{
                         backgroundColor: colors[index],
                         color: textColors[index]
@@ -132,7 +132,7 @@ const Page = () => {
             <motion.p
               variants={fadeUp}
               custom={6}
-              className="text-[0.8rem] md:text-4xl max-w-[900px] mt-5 leading-tight font-[poppins] font-bold text-center"
+              className="text-sm md:text-lg lg:text-xl max-w-xl md:max-w-3xl mt-5 leading-tight font-[poppins] font-bold text-center"
             >
               Think{" "}
               <span className="text-[#00008b] font-bold">Nationally</span>, Act{" "}
@@ -147,7 +147,7 @@ const Page = () => {
                   .getElementById("events")
                   ?.scrollIntoView({ behavior: "smooth" })
               }
-              className="group w-[160px] h-[40px] rounded-full bg-gradient-to-br from-[#faf5f3] to-[#d2f2fc] shadow-[0_20px_30px_-6px_rgba(238,103,97,0.5)] mt-6 text-black text-[1rem] font-medium flex items-center justify-center gap-2 transition-all duration-300 hover:translate-y-[3px] hover:shadow-none active:opacity-50 relative overflow-hidden"
+              className="group px-4 md:px-6 py-2 md:py-3 rounded-full bg-gradient-to-br from-[#faf5f3] to-[#d2f2fc] shadow-[0_20px_30px_-6px_rgba(238,103,97,0.5)] mt-6 text-black text-sm md:text-base font-medium flex items-center justify-center gap-2 transition-all duration-300 hover:translate-y-[3px] hover:shadow-none active:opacity-50 relative overflow-hidden"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
               <span className="relative z-10">Our Events</span>
@@ -227,8 +227,8 @@ const ImageSlider = () => {
   };
 
   return (
-    <div className="flex justify-center items-center py-[50px] mt-[40px] mr-[7rem]">
-      <div className="relative w-[180vw] max-w-[850px] h-[550px] overflow-hidden rounded-[20px] shadow-[0_10px_40px_rgba(17,1,1,0.15)] group bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/20">
+    <div className="flex justify-center items-center py-12 mt-8 md:mt-10 md:mr-16 px-4 w-full">
+      <div className="relative w-full max-w-[850px] h-56 md:h-[420px] lg:h-[550px] overflow-hidden rounded-[20px] shadow-[0_10px_40px_rgba(17,1,1,0.15)] group bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/20 mx-auto">
         {/* Decorative corner elements */}
         <div className="absolute top-0 left-0 w-16 h-16 bg-gradient-to-br from-white/20 to-transparent rounded-br-full"></div>
         <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-bl from-white/20 to-transparent rounded-bl-full"></div>
@@ -292,7 +292,7 @@ const ImageSlider = () => {
         </div>
 
         {/* Enhanced slide counter with progress */}
-        <div className="absolute top-4 right-4 bg-black/20 backdrop-blur-sm rounded-lg px-3 py-2 text-white text-sm font-medium z-30 opacity-0 group-hover:opacity-100 transition-all duration-300 border border-white/10">
+        <div className="absolute top-4 right-4 bg-black/20 backdrop-blur-sm rounded-lg px-3 py-1.5 text-white text-sm font-medium z-30 opacity-0 group-hover:opacity-100 transition-all duration-300 border border-white/10">
           <div className="flex items-center space-x-2">
             <span>{currentIndex + 1} / {images.length}</span>
             <div className="w-12 h-1 bg-white/20 rounded-full overflow-hidden">
@@ -369,7 +369,7 @@ const MobileImageSlider = () => {
 
   return (
     <div className="flex justify-center items-center w-full">
-      <div className="relative w-full max-w-[480px] h-[250px] overflow-hidden rounded-[15px] shadow-[0_10px_20px_rgba(17,1,1,0.1)] group bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/20">
+      <div className="relative w-full max-w-md h-56 overflow-hidden rounded-[15px] shadow-[0_10px_20px_rgba(17,1,1,0.1)] group bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/20 mx-auto">
         {/* Mobile decorative elements */}
         <div className="absolute top-0 left-0 w-8 h-8 bg-gradient-to-br from-white/20 to-transparent rounded-br-full"></div>
         <div className="absolute top-0 right-0 w-8 h-8 bg-gradient-to-bl from-white/20 to-transparent rounded-bl-full"></div>
@@ -505,7 +505,7 @@ const Navbar = () => {
               <img
                 src="/images/logo.png"
                 alt="Engineering India"
-                className="w-[180px] md:w-[180px] hover:scale-105 transition-transform duration-300"
+                className="w-32 md:w-44 hover:scale-105 transition-transform duration-300"
               />
             </Link>
           </div>
