@@ -8,6 +8,7 @@ This is a simple markdown file created on the bhushan branch.
 - Part of the website-engineering-india project
 
 ## Usage
+
 This file contains basic information and can be used as a template for other markdown files.
 
 ## Notes
