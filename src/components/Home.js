@@ -126,42 +126,40 @@ const Page = () => {
                     </motion.span>
                   );
                 })}
-              </span>
-            </motion.h1>
+                </span>
+              </motion.h1>
 
-            <motion.p
-              variants={fadeUp}
-              custom={6}
-              className="text-sm md:text-lg lg:text-xl max-w-xl md:max-w-3xl mt-5 leading-tight font-[poppins] font-bold text-center"
-            >
-              Think{" "}
-              <span className="text-[#00008b] font-bold">Nationally</span>, Act{" "}
-              <span className="text-[#059669] font-bold">Locally</span>
-            </motion.p>
+              <motion.p
+                variants={fadeUp}
+                custom={6}
+                className="text-sm md:text-lg lg:text-xl max-w-xl md:max-w-3xl mt-5 leading-tight font-[poppins] font-bold text-center"
+              >
+                Think{" "}
+                <span className="text-[#00008b] font-bold">Nationally</span>, Act{" "}
+                <span className="text-[#059669] font-bold">Locally</span>
+              </motion.p>
 
-            <motion.button
-              variants={fadeUp}
-              custom={7}
-              onClick={() =>
-                document
-                  .getElementById("events")
-                  ?.scrollIntoView({ behavior: "smooth" })
-              }
-              className="group px-4 md:px-6 py-2 md:py-3 rounded-full bg-gradient-to-br from-[#faf5f3] to-[#d2f2fc] shadow-[0_20px_30px_-6px_rgba(238,103,97,0.5)] mt-6 text-black text-sm md:text-base font-medium flex items-center justify-center gap-2 transition-all duration-300 hover:translate-y-[3px] hover:shadow-none active:opacity-50 relative overflow-hidden"
-            >
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
-              <span className="relative z-10">Our Events</span>
-              <span className="relative z-10">
+              <motion.button
+                variants={fadeUp}
+                custom={7}
+                onClick={() =>
+                window.location.href = "https://abhyudaya.engineeringindia.co.in/"
+                }
+                className="group px-7 mt-28 md:px-6 py-3 md:py-3 rounded-full bg-gradient-to-br from-[#faf5f3] to-[#d2f2fc] shadow-[0_20px_30px_-6px_rgba(238,103,97,0.5)] text-black text-sm md:text-base font-medium flex items-center justify-center gap-2 transition-all duration-300 hover:translate-y-[3px] hover:shadow-none active:opacity-50 relative overflow-hidden"
+              >
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
+                <span className="relative z-10">Abhyudaya'25</span>
+                <span className="relative z-10">
                 <img
                   src="/images/arrow.png"
                   alt="arrow"
                   className="group-hover:scale-110 transition-transform duration-300"
                 />
-              </span>
-            </motion.button>
-          </motion.div>
+                </span>
+              </motion.button>
+              </motion.div>
 
-          {/* Right Slider */}
+              {/* Right Slider */}
           <motion.div
             className="hidden md:flex md:w-1/2 md:justify-center md:px-5 md:py-4"
             initial={{ opacity: 0, x: 50 }}
