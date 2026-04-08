@@ -235,8 +235,8 @@ const Abhyudaya = () => {
             <strong className="text-blue-700">Abhyudaya</strong> is a collaborative social initiative conducted under the banner of Engineering India, where students
             from various engineering institutes across Nagpur come together to drive change and spread awareness on
             important social issues. This annual event fosters youth engagement through impactful campaigns, outreach
-            programs, and community-driven activities. With the support of <strong className="text-blue-700">300+ coordinators</strong> and participation from over
-            <strong className="text-blue-700"> 2500 students</strong>, Abhyudaya is a testament to unity, compassion, and the shared spirit of responsibility among
+            programs, and community-driven activities. With the support of <strong className="text-blue-700">400+ coordinators</strong> and participation from over
+            <strong className="text-blue-700"> 3500+ students</strong>, Abhyudaya is a testament to unity, compassion, and the shared spirit of responsibility among
             future engineers.
           </p>
         </motion.div>
@@ -337,10 +337,10 @@ Wisdom and leadership in Engineering India stand for guiding young minds with va
     },
     {
       year: "2025",
-      name: "ABHYUDAYA 25 — Coming Soon",
+      name: "Panchaparivartan",
       description: (
         <>
-          <span className="font-bold">ABHYUDAYA 25</span> is on the horizon! 🌟 Stay tuned for an exciting new theme that will continue our journey of cultural celebration, innovation, and inspiration. Something extraordinary is coming your way — get ready to be part of it! Stay Tunedd!!!
+          <span className="font-bold">ABHYUDAYA 25</span> was inspired by the vision <span className="font-bold">“परं वैभवं नेतुमेतत् स्वराष्ट्रम्”</span>, celebrating the spirit of transformation through पञ्चपरिवर्तन. This edition commemorated iconic milestones like 150 years of Vande Mataram and legacies of great leaders who shaped Bharat’s identity and consciousness. Through vibrant socio-technical and cultural engagements, the event brought together youth to embrace responsibility, innovation, and nation-building with renewed energy and purpose.
         </>
       ),
     },

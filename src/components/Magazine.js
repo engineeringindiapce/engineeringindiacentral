@@ -26,6 +26,35 @@ const magazineData = [
   },
 ];
 
+const fullMagazines = [
+  {
+    year: "2025",
+    title: "2025 Edition: Future Horizons",
+    desc: "Exploring sustainable engineering and digital transformation in Vidarbha.",
+    link: "/articles/Ei Magazine 2025_compressed.pdf",
+    color: "from-[#ea7707] to-[#fe9124]",
+    isNew: true,
+    icon: (
+      <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+      </svg>
+    )
+  },
+  {
+    year: "2024",
+    title: "2024 Edition: Genesis",
+    desc: "Celebrating the breakthrough innovations and student-led advancements.",
+    link: "/articles/magazine.pdf",
+    color: "from-[#1d0e4e] to-[#3b82f6]",
+    isNew: false,
+    icon: (
+      <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+      </svg>
+    )
+  },
+];
+
 const eventGallery = [
   {
     src: "/images/event1.png",
@@ -127,6 +156,33 @@ const AnimatedSection = ({ children, className = "", delay = 0, direction = "up"
   );
 };
 
+const archiveSliderSettings = {
+  dots: true,
+  infinite: fullMagazines.length > 2,
+  speed: 800,
+  slidesToShow: 2,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 5000,
+  pauseOnHover: true,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      }
+    }
+  ]
+};
+
 const Magazines = () => {
   const [showTopBtn, setShowTopBtn] = useState(false);
   const [hoveredEvent, setHoveredEvent] = useState(null);
@@ -166,12 +222,12 @@ const Magazines = () => {
             <h1 className="text-3xl md:text-5xl font-bold mb-6">
               <span className="text-[#2D1B69] font-extrabold tracking-wider">ENGINEERING</span>
               <br />
-              <span className="flex justify-center items-center mt-6">
-                <span className="text-[#FFFFFF] text-2xl md:text-4xl font-black px-3 py-2 bg-gradient-to-r from-[#FF8C00] to-[#FF6347] rounded-lg shadow-lg">I</span>
-                <span className="text-[#FFFFFF] text-2xl md:text-4xl font-black px-3 py-2 bg-gradient-to-r from-[#FF8C00] to-[#FF6347] rounded-lg mx-1 shadow-lg">N</span>
-                <span className="text-[#800080] text-2xl md:text-4xl font-black px-3 py-2 bg-gradient-to-r from-[#F5F5DC] to-[#FFFAF0] rounded-lg shadow-lg">D</span>
-                <span className="text-[#FFFFFF] text-2xl md:text-4xl font-black px-3 py-2 bg-gradient-to-r from-[#228B22] to-[#32CD32] rounded-lg mx-1 shadow-lg">I</span>
-                <span className="text-[#FFFFFF] text-2xl md:text-4xl font-black px-3 py-2 bg-gradient-to-r from-[#006400] to-[#228B22] rounded-lg shadow-lg">A</span>
+              <span className="flex justify-center items-center mt-6 flex-wrap gap-2">
+                <span className="text-[#FFFFFF] text-xl sm:text-2xl md:text-4xl font-black px-2 sm:px-3 py-2 bg-gradient-to-r from-[#FF8C00] to-[#FF6347] rounded-lg shadow-lg">I</span>
+                <span className="text-[#FFFFFF] text-xl sm:text-2xl md:text-4xl font-black px-2 sm:px-3 py-2 bg-gradient-to-r from-[#FF8C00] to-[#FF6347] rounded-lg shadow-lg">N</span>
+                <span className="text-[#800080] text-xl sm:text-2xl md:text-4xl font-black px-2 sm:px-3 py-2 bg-gradient-to-r from-[#F5F5DC] to-[#FFFAF0] rounded-lg shadow-lg">D</span>
+                <span className="text-[#FFFFFF] text-xl sm:text-2xl md:text-4xl font-black px-2 sm:px-3 py-2 bg-gradient-to-r from-[#228B22] to-[#32CD32] rounded-lg shadow-lg">I</span>
+                <span className="text-[#FFFFFF] text-xl sm:text-2xl md:text-4xl font-black px-2 sm:px-3 py-2 bg-gradient-to-r from-[#006400] to-[#228B22] rounded-lg shadow-lg">A</span>
               </span>
             </h1>
 
@@ -195,17 +251,17 @@ const Magazines = () => {
           </AnimatedSection>
         </div>
 
-        <main className="py-16 px-6">
+        <main className="py-16 px-0 ">
           {/* Featured Articles Section */}
           <AnimatedSection direction="up" className="max-w-6xl mx-auto mb-20">
             <section>
               <h2 className="text-4xl font-bold text-center text-[#1d0e4e] mb-4">
                 Featured Articles
               </h2>
-              <p className="text-center text-gray-600 mb-12 text-lg max-w-2xl mx-auto">
+              <p className="text-center text-gray-600 mb-8 sm:mb-12 text-base sm:text-lg max-w-2xl mx-auto">
                 Dive deep into the stories that shape our engineering community
               </p>
-              <AnimatedSection direction="scale" delay={200} className="bg-white rounded-3xl shadow-xl p-8">
+              <AnimatedSection direction="scale" delay={200} className="bg-white rounded-2xl sm:rounded-3xl shadow-xl p-4 sm:p-8">
                 <Slider {...sliderSettings}>
                   {magazineData.map((mag, idx) => (
                     <div key={idx} className="px-4">
@@ -234,10 +290,10 @@ const Magazines = () => {
           <AnimatedSection direction="up" className="max-w-6xl mx-auto mb-20">
             <section>
               <h2 className="text-4xl font-bold text-center text-[#1d0e4e] mb-4">Event Highlights</h2>
-              <p className="text-center text-gray-600 mb-12 text-lg max-w-2xl mx-auto">
+              <p className="text-center text-gray-600 mb-8 sm:mb-12 text-base sm:text-lg max-w-2xl mx-auto">
                 Capturing moments that define our engineering journey
               </p>
-              <AnimatedSection direction="scale" delay={200} className="bg-white rounded-3xl shadow-xl p-8">
+              <AnimatedSection direction="scale" delay={200} className="bg-white rounded-2xl sm:rounded-3xl shadow-xl p-4 sm:p-8">
                 <Slider {...sliderSettings}>
                   {eventGallery.map((event, idx) => (
                     <div key={idx} className="px-4">
@@ -277,16 +333,16 @@ const Magazines = () => {
           </AnimatedSection>
 
           {/* Why Read Section */}
-          <AnimatedSection direction="up" className="max-w-6xl mx-auto mb-16">
+          <AnimatedSection direction="up" className="max-w-6xl mx-auto mb-0 sm:mb-16">
             <section>
               <h2 className="text-4xl font-bold text-center text-[#1d0e4e] mb-4">
                 Why Read Engineering India?
               </h2>
-              <p className="text-center text-gray-600 mb-12 text-lg max-w-2xl mx-auto">
+              <p className="text-center text-gray-600 mb-8 sm:mb-12 text-base sm:text-lg max-w-2xl mx-auto">
                 Your gateway to innovation, inspiration, and excellence
               </p>
-              <AnimatedSection direction="left" delay={200} className="bg-white rounded-3xl shadow-xl p-10 border border-gray-100">
-                <div className="bg-gradient-to-br from-[#f8fafc] to-[#e2e8f0] rounded-2xl p-8">
+              <AnimatedSection direction="left" delay={200} className="bg-white rounded-2xl sm:rounded-3xl shadow-xl p-5 sm:p-0 border border-gray-100">
+                <div className="bg-gradient-to-br from-[#f8fafc] to-[#e2e8f0] rounded-xl sm:rounded-2xl p-5 sm:p-8 ">
                   <AnimatedSection direction="up" delay={400}>
                     <p className="text-lg leading-relaxed text-gray-700 mb-8">
                       Join us in amplifying the voices shaping India's engineering future. Be curious, be inspired — and discover the full spectrum in the complete issue.
@@ -355,21 +411,76 @@ const Magazines = () => {
                       </AnimatedSection>
                     </div>
                     
-                    {/* Read Full Magazine Button */}
-                    <AnimatedSection direction="scale" delay={900} className="text-center mt-10">
-                      <button
-                                  onClick={handleFullMagazineClick}
-                                  className="inline-flex items-center bg-gradient-to-r from-[#ea7707] to-[#fe9124] text-white px-6 md:px-8 py-3 md:py-4 rounded-full font-bold text-base md:text-lg hover:from-[#fe9124] hover:to-[#ea7707] transition-all duration-300 shadow-2xl hover:shadow-3xl transform hover:scale-110"
-                                >
-                        <svg className="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                        </svg>
-                        Read Full Magazine
-                        <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                        </svg>
-                      </button>
-                    </AnimatedSection>
+                    {/* Magazine Archive Section */}
+                    <div className="mt-16">
+                      <h3 className="text-3xl font-bold text-center text-[#1d0e4e] mb-10">Magazine Archive</h3>
+                      
+                      <div className="archive-slider-container">
+                        <Slider {...archiveSliderSettings}>
+                          {fullMagazines.map((mag, idx) => (
+                            <div key={idx} className="px-4 py-10">
+                              <AnimatedSection key={idx} direction={idx % 2 === 0 ? "left" : "right"} delay={200}>
+                                <div className="group relative bg-white/80 backdrop-blur-xl rounded-[1.5rem] sm:rounded-[2.5rem] overflow-hidden shadow-2xl hover:shadow-[0_20px_50px_rgba(234,119,7,0.2)] transition-all duration-500 border border-white/40 flex flex-col h-[350px] sm:h-[430px] md:h-[450px] p-6 sm:p-10">
+                                  
+                                  {/* Decorative Background Accent */}
+                                  <div className={`absolute -top-24 -right-24 w-48 h-48 bg-gradient-to-br ${mag.color} opacity-10 rounded-full blur-3xl group-hover:opacity-20 transition-opacity duration-500`}></div>
+
+                                  {/* Badges Container */}
+                                  <div className="absolute top-4 sm:top-8 right-4 sm:right-8 flex items-center space-x-3 z-10">
+                                    {mag.isNew && (
+                                      <span className="bg-[#ea7707] text-white text-[8px] sm:text-[10px] uppercase tracking-widest px-2 sm:px-3 py-1 rounded-full font-black animate-pulse shadow-lg">
+                                        New
+                                      </span>
+                                    )}
+                                    <span className={`bg-gradient-to-r ${mag.color} text-white px-3 sm:px-4 py-1 sm:py-1.5 rounded-full font-bold text-[10px] sm:text-xs shadow-md`}>
+                                      {mag.year}
+                                    </span>
+                                  </div>
+
+                                  {/* Icon Container */}
+                                  <div className="relative mb-6 sm:mb-10">
+                                    <div className={`inline-flex p-4 sm:p-5 rounded-2xl sm:rounded-3xl bg-gradient-to-br ${mag.color} text-white shadow-2xl transform group-hover:scale-110  transition-all duration-500 relative z-10`}>
+                                      {/* Responsive icon size */}
+                                      <div className="w-8 h-8 sm:w-12 sm:h-12 flex items-center justify-center">
+                                        {mag.icon}
+                                      </div>
+                                    </div>
+                                    {/* Icon Glow */}
+                                    <div className={`absolute inset-0 bg-gradient-to-br ${mag.color} opacity-30 blur-2xl rounded-full transform scale-75 group-hover:scale-125 transition-transform duration-500`}></div>
+                                  </div>
+
+                                  {/* Content */}
+                                  <div className="flex flex-col flex-grow relative z-10">
+                                    <h4 className="text-xl sm:text-2xl md:text-3xl font-black text-[#1d0e4e] mb-3 sm:mb-4 group-hover:text-[#ea7707] transition-colors duration-300 leading-tight">
+                                      {mag.title}
+                                    </h4>
+                                    <p className="text-gray-500 text-sm sm:text-base md:text-lg leading-relaxed mb-6 sm:mb-10 flex-grow font-medium">
+                                      {mag.desc}
+                                    </p>
+                                    
+                                    <div className="mt-auto ">
+                                      <button
+                                        onClick={() => handlePDFClick(mag.link)}
+                                        className={`w-full group/btn h-12 sm:h-14 relative inline-flex items-center justify-center bg-gradient-to-r ${mag.color} text-white px-6 sm:px-8 py-3.5 sm:py-4.5 rounded-xl sm:rounded-2xl font-black text-base sm:text-lg transition-all duration-300 shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-2xl hover:scale-[1.02] active:scale-95 overflow-hidden`}
+                                      >
+                                        <span className="relative z-10 flex items-center">
+                                          <svg className="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3 transition-transform duration-300 group-hover/btn:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                                          </svg>
+                                          Read Full Issue
+                                        </span>
+                                        {/* Shining Effect */}
+                                        <div className="absolute top-0 -inset-full h-full w-1/2 z-5 block transform -skew-x-12 bg-gradient-to-r from-transparent via-white/20 to-transparent group-hover:animate-shine"></div>
+                                      </button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </AnimatedSection>
+                            </div>
+                          ))}
+                        </Slider>
+                      </div>
+                    </div>
                   </AnimatedSection>
                 </div>
               </AnimatedSection>
