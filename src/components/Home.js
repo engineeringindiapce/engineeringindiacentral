@@ -470,17 +470,17 @@ const Navbar = () => {
   };
 
   // Function to get route identifier for highlighting
-  const getRouteId = (route) => {
-    switch (route) {
-      case '/': return 'home';
-      case '/clgsec': return 'ourcolleges';
-      case '/about': return 'aboutus';
-      case '/abhyudaya': return 'abhyudaya';
-      case '/cdp': return 'cdp';
-      case '/magazine': return 'magazine';
-      default: return '';
-    }
-  };
+  // const getRouteId = (route) => {
+  //   switch (route) {
+  //     case '/': return 'home';
+  //     case '/clgsec': return 'ourcolleges';
+  //     case '/about': return 'aboutus';
+  //     case '/abhyudaya': return 'abhyudaya';
+  //     case '/cdp': return 'cdp';
+  //     case '/magazine': return 'magazine';
+  //     default: return '';
+  //   }
+  // };
 
   // Updated navItems array - removed external CDP link
   const navItems = [

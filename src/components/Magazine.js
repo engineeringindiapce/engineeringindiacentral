@@ -205,9 +205,9 @@ const Magazines = () => {
   };
 
   // Handle full magazine PDF opening
-  const handleFullMagazineClick = () => {
-    window.location.href = "/articles/magazine.pdf";
-  };
+  // const handleFullMagazineClick = () => {
+  //   window.location.href = "/articles/magazine.pdf";
+  // };
 
   return (
     <>
