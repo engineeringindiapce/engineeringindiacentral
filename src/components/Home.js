@@ -143,12 +143,12 @@ const Page = () => {
                 variants={fadeUp}
                 custom={7}
                 onClick={() =>
-                window.location.href = "https://abhyudaya.engineeringindia.co.in/"
+                window.location.href = "https://www.engineeringindia.in/clgsec"
                 }
                 className="group px-7 mt-28 md:px-6 py-3 md:py-3 rounded-full bg-gradient-to-br from-[#faf5f3] to-[#d2f2fc] shadow-[0_20px_30px_-6px_rgba(238,103,97,0.5)] text-black text-sm md:text-base font-medium flex items-center justify-center gap-2 transition-all duration-300 hover:translate-y-[3px] hover:shadow-none active:opacity-50 relative overflow-hidden"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
-                <span className="relative z-10">Abhyudaya'25</span>
+                <span className="relative z-10">Explore Now</span>
                 <span className="relative z-10">
                 <img
                   src="/images/arrow.png"
